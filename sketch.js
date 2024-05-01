@@ -94,7 +94,7 @@ class letter{
         this.inv.draw();
         fill(255,255,255);
         rect(this.x-this.w*1.25,this.y,this.w*2.5,this.h/4);
-        let middle = (this.inner[0].used || this.inner[1].used || this.inner[2].used) && (this.inner[3].used || this.inner[4].used || this.inner[5].used);
+        let middle = (this.inner[0].used || this.inner[1].used || this.inner[2].used) && (this.inner[3].used || this.inner[4].used || this.inner[5].used) && !(!this.inner[0].used && this.inner[1].used && !this.inner[2].used && this.inner[3].used && this.inner[4].used && !this.inner[5].used);
         fill(220*middle+30, 220*middle+30, 220*middle+30);
         rect(this.x-this.thick/2,this.y-this.h,this.thick,this.h);
     }
